@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const TopBar = () => {
   return (
@@ -24,6 +25,15 @@ const TopBar = () => {
           Donate
         </Link>
       </nav>
+      <button type="button">
+        {/* <Image
+          src="/icons/light_mode_white.svg"
+          alt="light mode white"
+          width={24}
+          height={24}
+        /> */}
+        <img src="/icons/light_mode_white.svg" alt="light mode white" />
+      </button>
     </header>
   );
 };

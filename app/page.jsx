@@ -12,7 +12,6 @@ export default async function Home() {
         Explore and learn more about different countries around the world.
         Select a country from the dropdown to get started.
       </p>
-      {/* <div className="mt-5 mx-auto sm:flex sm:justify-center md:mt-8"> */}
       <div className="w-full flex justify-center p-8">
         <SelectCountry countries={countries} />
       </div>
