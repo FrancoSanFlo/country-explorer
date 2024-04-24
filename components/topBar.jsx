@@ -10,7 +10,7 @@ const TopBar = () => {
       <nav className="flex flex-col gap-y-1 md:flex-row md:gap-x-6">
         <div className="h-full w-px bg-[#EADBC8]"></div>
         <Link
-          href="https://github.com"
+          href="https://github.com/FrancoSanFlo/country-explorer"
           target="_blank"
           className="text-sm font-light hover:underline"
         >
@@ -25,15 +25,6 @@ const TopBar = () => {
           Donate
         </Link>
       </nav>
-      <button type="button">
-        {/* <Image
-          src="/icons/light_mode_white.svg"
-          alt="light mode white"
-          width={24}
-          height={24}
-        /> */}
-        <img src="/icons/light_mode_white.svg" alt="light mode white" />
-      </button>
     </header>
   );
 };
