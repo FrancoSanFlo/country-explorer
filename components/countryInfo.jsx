@@ -3,10 +3,7 @@ import Image from "next/image";
 const CountryInfo = ({ countryData }) => {
   return (
     <div className="space-y-4">
-      <h2 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-        Country Details
-      </h2>
-      <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+      <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl font-bold">
         {countryData[0].name.common}
       </p>
       <Image
