@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { fetchCountryDetails } from "../lib/data";
-import Image from "next/image";
 import Spinner from "@/components/spinner";
 import CountryInfo from "@/components/countryInfo";
 import dynamic from "next/dynamic";
@@ -61,7 +60,6 @@ const CountryDetails = ({ params }) => {
               <CountryMap countryData={countryData[0]} />
             </div>
           </div>
-          {/* <CountryInfo countryData={countryData} /> */}
         </>
       )}
     </div>
