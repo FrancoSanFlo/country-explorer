@@ -13,7 +13,7 @@ export const fetchAllCountriesName = async () => {
 export const fetchCountryDetails = async (countryId) => {
   try {
     const response = await fetch(
-      `https://restcountries.com/v3.1/name/${countryId}`
+      `https://restcountries.com/v3.1/name/${countryId}?fullText=true`
     );
     const data = await response.json();
     return data;

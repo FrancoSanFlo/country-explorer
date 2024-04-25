@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { fetchCountryDetails } from "../lib/data";
 import Image from "next/image";
 import Spinner from "@/components/spinner";
+import CountryInfo from "@/components/countryInfo";
 
 const CountryDetails = ({ params }) => {
   const [countryData, setCountryData] = useState(null);
@@ -39,45 +40,7 @@ const CountryDetails = ({ params }) => {
       {countryData === null ? (
         <Spinner />
       ) : (
-        <div className="space-y-4">
-          <h2 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            Country Details
-          </h2>
-          <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            {countryData[0].name.common}
-          </p>
-          <Image
-            src={countryData[0].flags.svg}
-            alt={countryData[0].name.common}
-            width={400}
-            height={200}
-            className="rounded-lg shadow-md"
-          />
-          <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            {countryData[0].name.official}
-          </p>
-          <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Capital: {countryData[0].capital}
-          </p>
-          <h3 className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Currencies
-          </h3>
-          {Object.entries(countryData[0].currencies).map(
-            ([code, { name, symbol }]) => (
-              <ul key={code} className="list-inside space-y-1 list-none">
-                <li className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                  Code: {code}
-                </li>
-                <li className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                  Name: {name}
-                </li>
-                <li className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                  Symbol: {symbol}
-                </li>
-              </ul>
-            )
-          )}
-        </div>
+        <CountryInfo countryData={countryData} />
       )}
     </div>
   );

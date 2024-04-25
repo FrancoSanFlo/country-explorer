@@ -18,10 +18,6 @@ const TopBar = () => {
         </Link>
         <div className="h-full w-px bg-[#EADBC8]"></div>
         <Link href="#" className="text-sm font-light hover:underline">
-          About
-        </Link>
-        <div className="h-full w-px bg-[#EADBC8]"></div>
-        <Link href="#" className="text-sm font-light hover:underline">
           Donate
         </Link>
       </nav>
