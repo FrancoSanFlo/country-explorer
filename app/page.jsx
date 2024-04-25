@@ -15,6 +15,20 @@ export default async function Home() {
       <div className="w-full flex justify-center p-8">
         <SelectCountry countries={countries} />
       </div>
+      <div className="flex flex-col items-center">
+        <h2 className="text-lg tracking-tight font-extrabold text-gray-900 sm:text-lg md:text-xl flex flex-col items-center">
+          <span className="block xl:inline">
+            If you want to see all the countries in the world, click on the
+            button
+          </span>
+          <a
+            href="/countries"
+            className="text-white text-md sm:text-base md:text-lg hover:bg-indigo-700 py-1 px-2 border border-transparent bg-indigo-600 rounded-md mt-4"
+          >
+            All countries
+          </a>
+        </h2>
+      </div>
     </div>
   );
 }
