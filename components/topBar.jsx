@@ -17,9 +17,15 @@ const TopBar = () => {
           View on GitHub
         </Link>
         <div className="h-full w-px bg-[#EADBC8]"></div>
-        <Link href="#" className="text-sm font-light hover:underline">
-          Donate
-        </Link>
+        <div>
+          <Link
+            href="https://buymeacoffee.com/francosanchez"
+            className="text-sm font-light hover:underline mr-2"
+          >
+            Buy me a coffee
+          </Link>
+          ☕
+        </div>
       </nav>
     </header>
   );
